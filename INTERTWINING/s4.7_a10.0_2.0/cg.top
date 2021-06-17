@@ -1,0 +1,20 @@
+; Include forcefield parameters
+
+#include "ff.itp"
+; #include "w.itp"
+
+
+; #include "martini_v2.0_solvents.itp"
+; #include "martini_v2.0_ions.itp"
+#include "fiber_1.itp"
+#include "fiber_2.itp"
+
+
+[ system ]
+; Name
+2 fibers of 200 mons
+
+[ molecules ]
+; Compound        #mols
+FB1    1
+FB2    1
