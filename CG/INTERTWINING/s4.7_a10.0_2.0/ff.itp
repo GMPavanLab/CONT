@@ -1,0 +1,45 @@
+[ defaults ]
+1 2
+
+[ atomtypes ]
+; STANDARD types, 4:1 mapping
+F    0    72.000      0.000     A   0.0           0.0
+M    0    72.000      0.000     A   0.0           0.0
+P    0    72.000      0.000     A   0.0           0.0
+G    0    72.000      0.000     A   0.0           0.0
+;W    0   72.000      0.000     A   0.0           0.0
+
+
+[ nonbond_params ]
+
+; levels of LJ interaction:
+; O     - supra attractive:     (eps=5.6, s=0.47) 
+; I     - attractive:       (eps=5.0, s=0.47) 
+; II    - almost attractive:    (eps=4.5, s=0.47)
+; III   - semi attractive:  (eps=4.0, s=0.47) 
+; IV    - intermediate:     (eps=3.5, s=0.47) 
+; V     - almost intermediate:  (eps=3.1, s=0.47) 
+; VI    - semi repulsive:   (eps=2.7, s=0.47) 
+; VII   - almost repulsive:     (eps=2.3, s=0.47) 
+; VIII  - repulsive:        (eps=2.0, s=0.47)
+;
+; RINGS: for ring-ring interactions eps is reduced to 75%, sigma=0.43.
+
+; i j   funda c6 c12 
+; self terms
+;  W       W  1  4.700000e-01 5.000000e+00  ; Martini W 
+  M       M  1  4.700000e-01 0.200000e+00  ; dm_rrVIII 
+  F       F  1  4.700000e-01 0.200000e+00  ; 0.5*dm_rrVIII
+  P       P  1  3.890000e-01 0.200000e+00  ; dm_rrVIII 
+  G       G  1  3.890000e-01 0.200000e+00  ; dm_rrVIII 
+
+; cross terms 
+;  W       M  1  4.700000e-01 4.000000e+00
+;  W       F  1  4.700000e-01 4.000000e+00 
+  M       F  1  4.700000e-01 0.2000000e+00 ;  dm_rr0
+  P       F  1  4.700000e-01 0.200000e+00  ; dm_rrVIII
+  P       M  1  4.700000e-01 0.200000e+00  ; dm_rrVIII
+  G       F  1  4.700000e-01 0.2000000e+00 ;  dm_rr0
+  G       M  1  4.700000e-01 0.200000e+00  ; dm_rrVIII
+  G       P  1  4.700000e-01 2.000000e+00  ; dm_rrVIII 
+
